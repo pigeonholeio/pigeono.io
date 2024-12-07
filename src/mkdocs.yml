@@ -171,7 +171,7 @@ nav:
   # - About: 
     # - Introduction: about/origins.md
     # - Get Involved: about/getinvolved.md
-  - Get Involved: about/getinvolved
+  - Get Involved: about/getinvolved.md
   - Docs:
       - Quick Start Guide: quick-start.md
       - Managing Secrets: secrets/manage.md

@@ -1,0 +1,243 @@
+<!doctype html><html lang=en class=no-js> <head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Tired of clunky apps for sharing sensitive files or secrets? Meet PigeonHole, the sleek, secure, and super-smart CLI tool designed to make sharing secrets seamless. 🔐✨"><meta name=author content=PlaneSailing.io><link href=https://pigeono.io/ rel=canonical><link href=about/getinvolved/ rel=next><link rel=icon href=assets/images/favicon-32x32.png><meta name=generator content="mkdocs-1.6.1, mkdocs-material-9.5.47"><title>Sending secrets securely - PigeonHole</title><link rel=stylesheet href=assets/stylesheets/main.6f8fc17f.min.css><link rel=stylesheet href=assets/stylesheets/palette.06af60db.min.css><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link rel=stylesheet href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback"><style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style><link rel=stylesheet href=assets/stylesheets/extra.css><script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script><link rel=stylesheet href=assets/stylesheets/main.82a244a8.min.css></head> <body dir=ltr data-md-color-scheme=default data-md-color-primary=indigo data-md-color-accent=indigo> <input class=md-toggle data-md-toggle=drawer type=checkbox id=__drawer autocomplete=off> <input class=md-toggle data-md-toggle=search type=checkbox id=__search autocomplete=off> <label class=md-overlay for=__drawer></label> <div data-md-component=skip> </div> <div data-md-component=announce> </div> <header class="md-header md-header--shadow md-header--lifted" data-md-component=header> <nav class="md-header__inner md-grid" aria-label=Header> <a href=. title=PigeonHole class="md-header__button md-logo" aria-label=PigeonHole data-md-component=logo> <img src=assets/images/logo-small-transparent.png alt=logo> </a> <label class="md-header__button md-icon" for=__drawer> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg> </label> <div class=md-header__title data-md-component=header-title> <div class=md-header__ellipsis> <div class=md-header__topic> <span class=md-ellipsis> PigeonHole </span> </div> <div class=md-header__topic data-md-component=header-topic> <span class=md-ellipsis> Sending secrets securely </span> </div> </div> </div> <form class=md-header__option data-md-component=palette> <input class=md-option data-md-color-media data-md-color-scheme=default data-md-color-primary=indigo data-md-color-accent=indigo aria-label="Switch to dark mode" type=radio name=__palette id=__palette_0> <label class="md-header__button md-icon" title="Switch to dark mode" for=__palette_1 hidden> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg> </label> <input class=md-option data-md-color-media data-md-color-scheme=slate data-md-color-primary=indigo data-md-color-accent=indigo aria-label="Switch to light mode" type=radio name=__palette id=__palette_1> <label class="md-header__button md-icon" title="Switch to light mode" for=__palette_0 hidden> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg> </label> </form> <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script> <label class="md-header__button md-icon" for=__search> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg> </label> <div class=md-search data-md-component=search role=dialog> <label class=md-search__overlay for=__search></label> <div class=md-search__inner role=search> <form class=md-search__form name=search> <input type=text class=md-search__input name=query aria-label=Search placeholder=Search autocapitalize=off autocorrect=off autocomplete=off spellcheck=false data-md-component=search-query required> <label class="md-search__icon md-icon" for=__search> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg> </label> <nav class=md-search__options aria-label=Search> <a href=javascript:void(0) class="md-search__icon md-icon" title=Share aria-label=Share data-clipboard data-clipboard-text data-md-component=search-share tabindex=-1> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg> </a> <button type=reset class="md-search__icon md-icon" title=Clear aria-label=Clear tabindex=-1> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg> </button> </nav> <div class=md-search__suggest data-md-component=search-suggest></div> </form> <div class=md-search__output> <div class=md-search__scrollwrap tabindex=0 data-md-scrollfix> <div class=md-search-result data-md-component=search-result> <div class=md-search-result__meta> Initializing search </div> <ol class=md-search-result__list role=presentation></ol> </div> </div> </div> </div> </div> <div class=md-header__source> <a href=https://github.com/pigeonholeio/pigeonhole-cli title="Go to repository" class=md-source data-md-component=source> <div class="md-source__icon md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 448 512"><!-- Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg> </div> <div class=md-source__repository> pigeonholeio/pigeonhole-cli </div> </a> </div> </nav> <nav class=md-tabs aria-label=Tabs data-md-component=tabs> <div class=md-grid> <ul class=md-tabs__list> <li class="md-tabs__item md-tabs__item--active"> <a href=. class=md-tabs__link> Home </a> </li> <li class=md-tabs__item> <a href=about/getinvolved/ class=md-tabs__link> Get Involved </a> </li> <li class=md-tabs__item> <a href=quick-start/ class=md-tabs__link> Docs </a> </li> </ul> </div> </nav> </header> <div class=md-container data-md-component=container> <link rel=stylesheet href=https://static.snoweb.io/snowebsvg/dist/css/themes-0.0.129.css> <link rel=stylesheet href=https://static.snoweb.io/snowebsvg/dist/css/themesauto-0.0.129.css> <style>
+  :root {
+    --svg-theme-light-primary: #14253A;
+    --svg-theme-light-secondary: #E63946;
+    --svg-theme-light-tertiary: #F7F7F7;
+
+    --svg-theme-dark-primary: #F7F7F7;
+    --svg-theme-dark-secondary: #E63946;
+    --svg-theme-dark-tertiary: #112032;
+  }
+
+  .md-main {
+    flex-grow: 0
+  }
+
+  .md-main__inner {
+    display: flex;
+    height: 100%;
+  }
+
+  .tx-container {
+    padding-top: .0rem;
+    background: linear-gradient(to bottom, var(--md-primary-fg-color), hsla(160deg, 47%, 55%, 1) 99%, #fff 99%)
+  }
+
+  .tx-hero {
+    margin: 32px 2.8rem;
+    color: var(--md-primary-bg-color);
+    justify-content: center;
+  }
+
+  .tx-hero h1 {
+    margin-bottom: 1rem;
+    color: currentColor;
+    font-weight: 700
+  }
+
+  .tx-hero__content {
+    padding-bottom: 1rem;
+    margin: 0 auto;
+  }
+
+  .tx-hero__image {
+    width: 17rem;
+    height: 17rem;
+    order: 1;
+    padding-right: 2.5rem;
+  }
+
+  .tx-hero .md-button {
+    margin-top: .5rem;
+    margin-right: .1rem;
+    color: var(--md-primary-bg-color)
+  }
+
+  .tx-hero .md-button--primary {
+    background-color: var(--md-primary-bg-color);
+    color: hsla(280deg, 37%, 48%, 1);
+    border-color: var(--md-primary-bg-color)
+  }
+
+  .tx-hero .md-button:focus,
+  .tx-hero .md-button:hover {
+    background-color: var(--md-accent-fg-color);
+    color: var(--md-default-bg-color);
+    border-color: var(--md-accent-fg-color)
+  }
+
+  .feature-item h2 svg {
+    height: 30px;
+    float: left;
+    margin-right: 10px;
+    transform: translateY(10%);
+  }
+
+  .top-hr {
+    margin-top: 42px;
+  }
+
+  .feature-item {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    box-sizing: border-box;
+    padding: 0 15px;
+    word-break: break-word
+  }
+
+  .feature-item p a {
+    color: rgb(38, 0, 255);
+    font-weight: 300;
+  }
+
+  .feature-item h2 {
+    color: #333;
+    font-weight: 300;
+    font-size: 25px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: normal;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-family: inherit;
+  }
+
+  .feature-item p {
+    font-size: 16px;
+    line-height: 1.8em;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    color: #111;
+    margin: 0 0 10px;
+    display: block;
+  }
+
+  @media screen and (max-width:30em) {
+    .tx-hero h1 {
+      font-size: 1.4rem
+    }
+  }
+
+  @media screen and (min-width:60em) {
+    .md-sidebar--secondary {
+      display: none
+    }
+
+    .tx-hero {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .tx-hero__content {
+      max-width: 22rem;
+      margin-top: 3.5rem;
+      margin-bottom: 3.5rem;
+      margin-left: 1.0rem;
+      margin-right: 4.0rem;
+      align-items: center;
+    }
+  }
+
+  @media screen and (min-width:76.25em) {
+    .md-sidebar--primary {
+      display: none
+    }
+
+    .top-hr {
+      width: 100%;
+      display: flex;
+      max-width: 61rem;
+      margin-right: auto;
+      margin-left: auto;
+      padding: 0 .2rem;
+    }
+
+    .bottom-hr {
+      margin-top: 10px;
+      width: 100%;
+      display: flex;
+      max-width: 61rem;
+      margin-right: auto;
+      margin-left: auto;
+      padding: 0 .2rem;
+    }
+
+    .feature-item {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .feature-item:hover {
+      background-color: #526cfe47;
+      border-radius: 3px;
+    }
+  }
+
+  .hr {
+    border-bottom: 1px solid #eee;
+    width: 100%;
+    margin: 20px 0;
+  }
+
+  .text-center {
+    text-align: center;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 15px;
+    font-family: 'Lato', sans-serif;
+    font-size: 23px;
+    font-weight: 300;
+    padding-bottom: 10px;
+  }
+
+  .logos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row wrap;
+    margin: 0 auto;
+  }
+
+  .logos img {
+    flex: 1 1 auto;
+    padding: 25px;
+    max-height: 130px;
+    vertical-align: middle;
+  }
+
+  .hr-logos {
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
+
+  .md-footer-meta__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 1.0rem;
+  }
+
+  .md-footer-social {
+    padding-top: 20px;
+  }
+</style> <section class=mdx-container> <div class="md-grid md-typeset"> <div class=mdx-hero> <div class=mdx-hero__image> <img src=assets/images/landing_page.png width=800 style=order:1;float:right; alt draggable=false> </div> <div class=mdx-hero__content> <h1>The easiest way to share your secrets securely</h1> <p>Tired of clunky apps for sharing sensitive files or secrets? Meet PigeonHole, the sleek, secure, and super-smart CLI tool designed to make sharing secrets seamless. 🔐✨. <br><br>Start sending secrets in less than 3 minutes!</p> <a href=about/getinvolved/ title="Get Involved" class="md-button md-button--primary"> Get Started </a> <a href=roadmap/ title="Roadmap for MVP" class=md-button> Docs </a> </div> </div> <!-- <h2>Hello</h2> --> </div> <div> </div> <!-- <div class="top-hr"> --> <div class=hr> </div> <!-- </div> --> </section> <section class=tx-container-1> <div class="md-grid md-typeset hide-small"> </div> <div class="md-grid md-typeset" style="max-width: 40rem; padding-top: 3rem; margin-bottom: 3rem;"> <div class=tx-intro> <h1>Everything you need to share secrets with confidence</h1> <p class=subtext>PigeonHole makes sending secrets with GPG & OpenPGP Cryptography super simple.</p> </div> <div class="items-center feature-grid grid"> <div> <h3> <span class=twemoji> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"> <path d="M12 12h7c-.53 4.11-3.28 7.78-7 8.92zH5V6.3l7-3.11M12 1 3 5v6c0 5.55 3.84 10.73 9 12 5.16-1.27 9-6.45 9-12V5z"/> </svg> </span> Chain of Trust </h3> <p> PigeonHole provides the simplicity of tying a cryptographic key to an online Identity by locally generating GPG keys with secure defaults, and seamlessly leveraging your Identity Provider's user details.</p> </div> <div> <h3> <span class=twemoji> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"> <path d="M3 20h2v-2h6v2h2v-2h6v2h2v-5h-2v1h-2v-1h-2v1h-2v-1h-2v1H9v-1H7v1H5v-1H3m2-2h14V4H5Z"/> </svg> </span> End-to-End Encryption</h3> <p> Rock solid cryptography from the <a href=https://github.com/ProtonMail/gopenpgp>ProtonMail/gopenpgp</a> library. Only the recipient's private key can decrypt the secrets you send </p> </div> <div> <h3> <span class=twemoji> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"> <path d="M11 15H6l7-14v8h5l-7 14z"/> </svg> </span> Terminal Native</h3> <p> No more context switching to send files! <br>Built using the same powerful libraries that drive popular CLI tools like Docker, Kubernetes, Helm and CockroachDB, delivering a familiar and intuitive experience.</p> </div> <div> <h3> <span class=twemoji> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"> <path d="m14.6 16.6 4.6-4.6-4.6-4.6L16 6l6 6-6 6zm-5.2 0L4.8 12l4.6-4.6L8 6l-6 6 6 6z"/> </svg> </span> Flexible Storage</h3> <p> Built leveraging the S3 API protocol as the storage backend, allowing secrets of any size and quantity to be sent. </p> </div> <div> <h3> <span class=twemoji> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"> <path d="M12.876.64V.639l8.25 4.763c.541.313.875.89.875 1.515v9.525a1.75 1.75 0 0 1-.875 1.516l-8.25 4.762a1.75 1.75 0 0 1-1.75 0l-8.25-4.763a1.75 1.75 0 0 1-.875-1.515V6.917c0-.625.334-1.202.875-1.515L11.126.64a1.75 1.75 0 0 1 1.75 0m-1 1.298L4.251 6.34l7.75 4.474 7.75-4.474-7.625-4.402a.25.25 0 0 0-.25 0m.875 19.123 7.625-4.402a.25.25 0 0 0 .125-.216V7.639l-7.75 4.474ZM3.501 7.64v8.803c0 .09.048.172.125.216l7.625 4.402v-8.947Z"/> </svg> </span> Built for Everyone </h3> <p> PigeonHole works seamlessly across macOS, Linux, Windows and Docker, ensuring you can secure and share your data regardless of your operating system. </p> </div> <div> <h3> <span class=twemoji> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"> <path d="M23.735.238V.236a.25.25 0 0 0-.2-.188c-.256-.04-6.336-.924-14.17 7.051a28 28 0 0 0-2.12 2.576l-4.047 1.166a.25.25 0 0 0-.124.08l-2.856 3.5a.248.248 0 0 0 .126.394l3.887 1.096.484-.566q.268-.311.574-.58l.54-.472-.38.608a5.6 5.6 0 0 1-.482.66l-.52.606c.008.79.214 1.488.62 2.068L3.68 19.653c-.148.16-.036.272.12.428l1.11 1.086c.153.16.255.258.41.1l1.505-1.534c.34.122 1.162.334 2.4.14l.75-.576q.32-.247.672-.442l.644-.36-.514.53q-.28.288-.6.534l-.62.476 1.424 3.804a.246.246 0 0 0 .404.09l3.242-3.144a.25.25 0 0 0 .072-.136l.698-4.108c.884-.78 1.78-1.686 2.66-2.694 5.072-5.806 5.798-10.315 5.78-12.487-.008-.702-.094-1.094-.1-1.122zM16.49 11.165c-1.274 1.296-3.1 1.564-4.082.6-.98-.962-.744-2.794.53-4.09s3.1-1.566 4.08-.602c.982.964.746 2.796-.528 4.092"/> </svg> </span> Transparent and Open Source </h3> <p> Full transparency into how your data is handled from the the CLI tool to the <a href=./backend-architecture>backend architecture</a>. </p> </div> </div> </div> </section> <section> <div class=top-hr> </div> </section> <section class=tx-container-1> <div class=hr> </div> <div class="md-grid md-typeset hide-small"> </div> <div class="md-grid md-typeset" style="max-width: 40rem; padding-top: 3rem; margin-bottom: 3rem;"> <div> <h1>See it in action!</h1> <script src=https://asciinema.org/a/KbhO2BkzbB07EY9U8tX61Adce.js id=asciicast-KbhO2BkzbB07EY9U8tX61Adce async=true></script> </div> </div> </section> <div class=top-hr> </div> <main class=md-main data-md-component=main> <div class="md-main__inner md-grid"> <div class="md-sidebar md-sidebar--primary" data-md-component=sidebar data-md-type=navigation> <div class=md-sidebar__scrollwrap> <div class=md-sidebar__inner> <nav class="md-nav md-nav--primary md-nav--lifted" aria-label=Navigation data-md-level=0> <label class=md-nav__title for=__drawer> <a href=. title=PigeonHole class="md-nav__button md-logo" aria-label=PigeonHole data-md-component=logo> <img src=assets/images/logo-small-transparent.png alt=logo> </a> PigeonHole </label> <div class=md-nav__source> <a href=https://github.com/pigeonholeio/pigeonhole-cli title="Go to repository" class=md-source data-md-component=source> <div class="md-source__icon md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 448 512"><!-- Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg> </div> <div class=md-source__repository> pigeonholeio/pigeonhole-cli </div> </a> </div> <ul class=md-nav__list data-md-scrollfix> <li class="md-nav__item md-nav__item--active"> <input class="md-nav__toggle md-toggle" type=checkbox id=__toc> <a href=. class="md-nav__link md-nav__link--active"> <span class=md-ellipsis> Home </span> </a> </li> <li class=md-nav__item> <a href=about/getinvolved/ class=md-nav__link> <span class=md-ellipsis> Get Involved </span> </a> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle " type=checkbox id=__nav_3> <label class=md-nav__link for=__nav_3 id=__nav_3_label tabindex=0> <span class=md-ellipsis> Docs </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=1 aria-labelledby=__nav_3_label aria-expanded=false> <label class=md-nav__title for=__nav_3> <span class="md-nav__icon md-icon"></span> Docs </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=quick-start/ class=md-nav__link> <span class=md-ellipsis> Quick Start Guide </span> </a> </li> <li class=md-nav__item> <a href=secrets/manage/ class=md-nav__link> <span class=md-ellipsis> Managing Secrets </span> </a> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle " type=checkbox id=__nav_3_3> <label class=md-nav__link for=__nav_3_3 id=__nav_3_3_label tabindex=0> <span class=md-ellipsis> Architecture </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=2 aria-labelledby=__nav_3_3_label aria-expanded=false> <label class=md-nav__title for=__nav_3_3> <span class="md-nav__icon md-icon"></span> Architecture </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=architecture/deep-dive/ class=md-nav__link> <span class=md-ellipsis> Architecture Deep Dive </span> </a> </li> <li class=md-nav__item> <a href=architecture/sso/ class=md-nav__link> <span class=md-ellipsis> Authentication </span> </a> </li> <li class=md-nav__item> <a href=architecture/self-hosted/ class=md-nav__link> <span class=md-ellipsis> Self-Hosted Install </span> </a> </li> </ul> </nav> </li> </ul> </nav> </li> </ul> </nav> </div> </div> </div> <div class="md-sidebar md-sidebar--secondary" data-md-component=sidebar data-md-type=toc> <div class=md-sidebar__scrollwrap> <div class=md-sidebar__inner> <nav class="md-nav md-nav--secondary" aria-label="Table of contents"> </nav> </div> </div> </div> <div class=md-content data-md-component=content> <article class="md-content__inner md-typeset"> </article> </div> <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script> </div> <button type=button class="md-top md-icon" data-md-component=top hidden> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg> Back to top </button> </main> <!-- <footer style="background-color: #2c3e50; color: #ecf0f1; text-align: center; padding: 2rem; font-size: 0.8rem; line-height: 1.8;"> --> <footer style="background-color: #2c3e50; color: #ecf0f1; text-align: center; padding: 2rem; font-size: 0.8rem; line-height: 1.8;"> <div> <p style="margin: 0; font-weight: bold;"> © <span id=site-name>PigeonHole</span> <span id=current-year>2024</span> </p> <p style="margin: 0;"> Built with ❤️ using <a href=https://www.mkdocs.org/ target=_blank style="color: #1abc9c; text-decoration: none;">MkDocs</a> and the <a href=https://squidfunk.github.io/mkdocs-material/ target=_blank style="color: #1abc9c; text-decoration: none;">Material Theme</a>. </p> <div style="margin-top: 1rem;"> <!-- <a href="https://github.com/your-repo" target="_blank" style="color: #1abc9c; text-decoration: none; margin: 0 1rem;">GitHub</a> --> <!-- <a href="/privacy-policy/" style="color: #1abc9c; text-decoration: none; margin: 0 1rem;">Privacy Policy</a> --> <!-- <a href="/terms-of-service/" style="color: #1abc9c; text-decoration: none; margin: 0 1rem;">Terms of Service</a> --> <!-- <a href="/contact/" style="color: #1abc9c; text-decoration: none; margin: 0 1rem;">Contact Us</a> --> </div> </div> </footer> <script>
+  // Automatically update the year and site name dynamically
+  document.getElementById('current-year').textContent = new Date().getFullYear();
+  document.getElementById('site-name').textContent = "PigeonHole"; // Change to your site name
+</script> <!-- Matomo --> <script>
+  var _paq = window._paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="https:////matomo.rhysevans.co.uk/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '1']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script> <noscript><p><img referrerpolicy=no-referrer-when-downgrade src="https://matomo.rhysevans.co.uk/matomo.php?idsite=1&rec=1" style=border:0; alt></p></noscript> <!-- End Matomo Code --> </div> <div class=md-dialog data-md-component=dialog> <div class="md-dialog__inner md-typeset"></div> </div> <script id=__config type=application/json>{"base": ".", "features": ["content.code.copy", "content.code.annotate", "content.tooltips", "navigation.indexes", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script> <script src=assets/javascripts/bundle.83f73b43.min.js></script> <script src=assets/javascripts/bundle.1ff6d521.min.js></script> </body> </html>

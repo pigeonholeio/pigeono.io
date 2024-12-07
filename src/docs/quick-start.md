@@ -21,7 +21,7 @@ Binaries are distributed directly and via several package managers.
 | :material-apple: MacOS       |  [Brew](#macos)  |
 | :material-linux: Linux       |  [Brew](#linux) |
 | :material-microsoft: Windows    |  [WinGet](#windows) |
-| :material-bash: N/A    |  [Direct Binaries](#manual-download) |
+| :material-bash: General    |  [Direct Binaries](#manual-download) |
 
 !!! tip "Request a new Package Manager"
     Raise a [[FEATURE REQUEST]](https://github.com/pigeonholeio/pigeonhole-cli/issues/new){:target="_blank"} to add support for another package manager - which package manager do you use?

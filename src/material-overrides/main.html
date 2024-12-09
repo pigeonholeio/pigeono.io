@@ -4,6 +4,23 @@
 {% extends "base.html" %}
 {% block extrahead %}
   <link rel="stylesheet" href="{{ 'assets/stylesheets/main.82a244a8.min.css' | url }}">
+  <script src="https://unpkg.com/highlight.run"></script>
+  <script>
+    H.init('ng2zxvrg', { // Get your project ID from https://app.highlight.io/setup
+        environment: 'production',
+        version: 'commit:984769639d69c53aa032d907a10f4bcd7241a532',
+        networkRecording: {
+            enabled: true,
+            recordHeadersAndBody: true,
+            urlBlocklist: [
+      // insert full or partial urls that you don't want to record here
+      // Out of the box, Highlight will not record these URLs (they can be safely removed):
+      "https://www.googleapis.com/identitytoolkit",
+      "https://securetoken.googleapis.com",
+            ],
+        },
+    });
+</script>
 {% endblock %}
 
 {% block content %}

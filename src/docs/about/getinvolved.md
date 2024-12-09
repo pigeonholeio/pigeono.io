@@ -16,7 +16,7 @@ A simple star shows your love for the project and boosts visibility. It’s like
 All you have to do is head over to [github.com/pigeonholeio/pigeonhole-cli](https://github.com/pigeonholeio/pigeonhole-cli){:target="_blank"}, make sure you're logged in and star it in the top right-hand corner 👍
 
 ### 🍺 Buy Me a Beer
-Developing, maintain and paying the AWS costs takes time, energy and money. You can fuel my coding sessions by buying me a beer
+I like beer and it is a Welshman's currency - developing, maintain and paying the AWS costs takes time, energy and money. You can fuel my coding sessions by buying me a beer.
 <script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="pigeonholeio" data-color="#FFDD00" data-emoji="🍺"  data-font="Poppins" data-text="Buy me a Beer!" data-outline-color="#000000" data-font-color="#000000" data-coffee-color="#ffffff" ></script>
 
 

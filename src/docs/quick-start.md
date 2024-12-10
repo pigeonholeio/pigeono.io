@@ -20,8 +20,8 @@ Binaries are distributed directly and via several package managers.
 | ----------- | ------------------------------------ |
 | :material-apple: MacOS       |  [Brew](#macos), [Shell](#__tabbed_1_2)  |
 | :material-linux: Linux       |  [Brew](#linux), [Shell](#__tabbed_2_2) |
-| :material-microsoft: Windows    |  [WinGet](#windows) |
-| :material-bash: General    |  [Direct Binaries](#manual-download) |
+| :material-microsoft: Windows    |  [WinGet](#windows), [WinGet](#__tabbed_3_2) [Shell](#__tabbed_3_3) |
+| :material-bash: General    |  [Raw Binaries](#manual-download) |
 
 !!! tip "Request a new Package Manager"
     Raise a [[FEATURE REQUEST]](https://github.com/pigeonholeio/pigeonhole-cli/issues/new){:target="_blank"} to add support for another package manager - which package manager do you use?
@@ -62,13 +62,6 @@ Install [Brew]{:target="_blank"} if you haven't already.
 
     Find a full list of releases below in the [Manual Download](#manual-download) section.
 
-<!-- === ":material-redhat: Yum"
-    !!! warning "Not Implemented Yet"
-        If you would like to see this then please get in touch. It's not currently supported but is on the roadmap.
-  
-    ``` bash
-    yum install pigeonhole
-    ``` -->
   
 ### Windows
 

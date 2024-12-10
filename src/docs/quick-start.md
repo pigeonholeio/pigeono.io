@@ -35,7 +35,7 @@ Install [Brew]{:target="_blank"} if you haven't already.
     ``` bash
     brew install pigeonholeio/pigeonhole/pigeonhole-cli
     ```
-=== ":material-bash: Shell (BASH)"
+=== ":material-bash: Shell (Bash)"
 
     ```
     /bin/bash -c "$(curl -fsSL https://pigeono.io/assets/install.sh)"
@@ -54,7 +54,7 @@ Install [Brew]{:target="_blank"} if you haven't already.
     brew install pigeonholeio/pigeonhole/pigeonhole-cli
     ```
 
-=== ":material-bash: Shell (BASH)"
+=== ":material-bash: Shell (Bash)"
 
     ```
     /bin/bash -c "$(curl -fsSL https://pigeono.io/assets/install.sh)"
@@ -73,18 +73,18 @@ Install [Brew]{:target="_blank"} if you haven't already.
 ### Windows
 
 === ":fontawesome-brands-windows: Manual Install"
-    Find the Windows binaries directly on the [Releases] page.
+    Find the Windows binaries are hosted and accessbile directly on the [Releases] page.
+    
     !!! tip "Work in Progress"
         I'm currently working on a Winget and PowerShell installer. They should be here soon!
+      
 
 === ":fontawesome-brands-windows: WinGet"
-    ``` pwsh
-    scoop bucket add org https://github.com/planesailingio/scoop-pigeonhole.git
-    scoop install planesailingio/scoop-pigeonhole
-    ```
+    !!! tip "Coming soon"
+        I'm currently working on the Windows installers. They should be here soon!
 === ":fontawesome-solid-terminal: Terminal (PowerShell)"
     !!! tip "Coming soon"
-        I'm currently working on the Winget and PowerShell installer. They should be here soon!
+        I'm currently working on the Windows installers. They should be here soon!
     
 
 ### Manual / Download

@@ -35,7 +35,7 @@ Install [Brew]{:target="_blank"} if you haven't already.
     ``` bash
     brew install pigeonholeio/pigeonhole/pigeonhole-cli
     ```
-=== ":material-bash: Binaries"
+=== ":material-bash: Shell (ZSH)"
 
     Find them below in the [Manual Download](#manual-download) section.
 

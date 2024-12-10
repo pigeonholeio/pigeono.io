@@ -18,7 +18,7 @@ Binaries are distributed directly and via several package managers.
 
 | Operating System      | Description                          |
 | ----------- | ------------------------------------ |
-| :material-apple: MacOS       |  [Brew](#macos), [Shell](/#__tabbed_1_2)  |
+| :material-apple: MacOS       |  [Brew](#macos), [Shell](#__tabbed_1_2)  |
 | :material-linux: Linux       |  [Brew](#linux), [Shell](#__tabbed_2_2) |
 | :material-microsoft: Windows    |  [WinGet](#windows) |
 | :material-bash: General    |  [Direct Binaries](#manual-download) |

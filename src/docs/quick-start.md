@@ -35,9 +35,13 @@ Install [Brew]{:target="_blank"} if you haven't already.
     ``` bash
     brew install pigeonholeio/pigeonhole/pigeonhole-cli
     ```
-=== ":material-bash: Shell (ZSH)"
+=== ":material-bash: Shell (BASH)"
 
-    Find them below in the [Manual Download](#manual-download) section.
+    ```
+    /bin/bash -c "$(curl -fsSL https://pigeono.io/assets/install.sh)"
+    ```
+
+    Find a full list of releases below in the [Manual Download](#manual-download) section.
 
 ### Linux
 
@@ -50,16 +54,16 @@ Install [Brew]{:target="_blank"} if you haven't already.
     brew install pigeonholeio/pigeonhole/pigeonhole-cli
     ```
 
-<!-- === ":material-ubuntu: Apt"
-    !!! warning "Not Implemented"
-        If you would like to see this then please get in touch. It's not currently supported but is on the roadmap.
+=== ":material-bash: Shell (BASH)"
 
-    ``` bash
-    apt install pigeonhole
+    ```
+    /bin/bash -c "$(curl -fsSL https://pigeono.io/assets/install.sh)"
     ```
 
-=== ":material-redhat: Yum"
-    !!! warning "Not Implemented"
+    Find a full list of releases below in the [Manual Download](#manual-download) section.
+
+<!-- === ":material-redhat: Yum"
+    !!! warning "Not Implemented Yet"
         If you would like to see this then please get in touch. It's not currently supported but is on the roadmap.
   
     ``` bash
@@ -69,8 +73,9 @@ Install [Brew]{:target="_blank"} if you haven't already.
 ### Windows
 
 === ":fontawesome-brands-windows: Manual Install"
-    Find the Windows binaries direectly on the [Releases] page.
-    
+    Find the Windows binaries directly on the [Releases] page.
+    !!! tip "Work in Progress"
+        I'm currently working on a Winget and PowerShell installer.
 
 <!-- === ":fontawesome-brands-windows: App Installer (Winget)"
     ``` pwsh

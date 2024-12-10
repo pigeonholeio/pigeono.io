@@ -18,8 +18,8 @@ Binaries are distributed directly and via several package managers.
 
 | Operating System      | Description                          |
 | ----------- | ------------------------------------ |
-| :material-apple: MacOS       |  [Brew](#macos)  |
-| :material-linux: Linux       |  [Brew](#linux) |
+| :material-apple: MacOS       |  [Brew](#macos), [Shell](/#__tabbed_1_2)  |
+| :material-linux: Linux       |  [Brew](#linux), [Shell](#__tabbed_2_2) |
 | :material-microsoft: Windows    |  [WinGet](#windows) |
 | :material-bash: General    |  [Direct Binaries](#manual-download) |
 
@@ -75,25 +75,17 @@ Install [Brew]{:target="_blank"} if you haven't already.
 === ":fontawesome-brands-windows: Manual Install"
     Find the Windows binaries directly on the [Releases] page.
     !!! tip "Work in Progress"
-        I'm currently working on a Winget and PowerShell installer.
+        I'm currently working on a Winget and PowerShell installer. They should be here soon!
 
-<!-- === ":fontawesome-brands-windows: App Installer (Winget)"
-    ``` pwsh
-    winget source add --name pigeonhole
-    winget install pigeonhole
-    ```
-
-=== ":fontawesome-brands-windows: Scoop"
+=== ":fontawesome-brands-windows: WinGet"
     ``` pwsh
     scoop bucket add org https://github.com/planesailingio/scoop-pigeonhole.git
     scoop install planesailingio/scoop-pigeonhole
     ```
-
-=== ":fontawesome-solid-terminal: PowerShell Gallery"
-    ``` pwsh
-    Install-Module -Name PigeonHole
-    Import-Module -Name PigeonHole
-    ``` -->
+=== ":fontawesome-solid-terminal: Terminal (PowerShell)"
+    !!! tip "Coming soon"
+        I'm currently working on the Winget and PowerShell installer. They should be here soon!
+    
 
 ### Manual / Download
 You can obtain the binaries for your platform and architecture by visiting [Releases].    

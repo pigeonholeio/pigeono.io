@@ -36,7 +36,7 @@ Install [Brew]{:target="_blank"} if you haven't already.
     brew install pigeonholeio/pigeonhole/pigeonhole-cli
     ```
 === ":material-bash: Shell (Bash)"
-    The below script will work out which architecture your machine runs on and downloads the relevant binary and will attempt to install it to `/usr/local/bin` with sudo.
+    The below script will work out which architecture your machine runs on and will download the relevant binary and will attempt to install it to `/usr/local/bin` with sudo.
     ```
     /bin/bash -c "$(curl -fsSL https://pigeono.io/assets/install.sh)"
     ```
@@ -55,7 +55,7 @@ Install [Brew]{:target="_blank"} if you haven't already.
     ```
 
 === ":material-bash: Shell (Bash)"
-    The below script will work out which architecture your machine runs on and downloads the relevant binary and will attempt to install it to `/usr/local/bin` with sudo.
+    The below script will work out which architecture your machine runs on and will download the relevant binary and will attempt to install it to `/usr/local/bin` with sudo.
     ```
     /bin/bash -c "$(curl -fsSL https://pigeono.io/assets/install.sh)"
     ```

@@ -10,7 +10,7 @@ The project is in its infancy so any help is greatly appreciated. Your involveme
 ## Easy Wins 🎉
 Sometimes, the smallest actions make the biggest difference!
 
-### ⭐ Star Us on GitHub
+### ⭐ Star the project on GitHub
 A simple star shows your love for the project and boosts visibility. It’s like giving us a virtual high-five!
 
 All you have to do is head over to [github.com/pigeonholeio/pigeonhole-cli](https://github.com/pigeonholeio/pigeonhole-cli){:target="_blank"}, make sure you're logged in and star it in the top right-hand corner 👍

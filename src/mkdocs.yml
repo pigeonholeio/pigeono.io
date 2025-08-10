@@ -22,23 +22,19 @@
 site_name: PigeonHole
 site_url: https://pigeono.io
 site_author: PlaneSailing.io
-site_description: >-
-  Tired of clunky apps for sharing sensitive files or secrets? Meet PigeonHole, the sleek, secure, and super-smart CLI tool designed to make sharing secrets seamless with zero compromise on security 🔐✨
+site_description: "Tired of clunky apps for sharing sensitive files or secrets? Meet PigeonHole, the sleek, secure, and super-smart CLI tool designed to make sharing secrets seamless with zero compromise on security \U0001F510✨"
 dev_addr: 0.0.0.0:8000
 # Repository
 repo_name: pigeonholeio/pigeonhole-cli
 repo_url: https://github.com/pigeonholeio/pigeonhole-cli
-
 # Copyright
 # copyright: Copyright &copy; 2016 - 2022 Martin Donath
 extra_css:
   - assets/stylesheets/extra.css
-
 # Configuration
 theme:
   name: material
   custom_dir: material-overrides
-  
   # Static files
   static_templates:
     - 404.html
@@ -97,31 +93,32 @@ plugins:
   #     redirect_maps:
   #       roadmap: roadmap/v1.md
   #       documentation: documentation/quick-start.md
-        # changelog/insiders.md: insiders/changelog.md
-        # conventions.md: philosophy.md
-        # reference/abbreviations.md: reference/tooltips.md
-        # reference/meta-tags.md: reference/index.md
-        # reference/variables.md: https://mkdocs-macros-plugin.readthedocs.io/
-        # sponsorship.md: insiders/index.md
-        # upgrading.md: upgrade.md
+  # changelog/insiders.md: insiders/changelog.md
+  # conventions.md: philosophy.md
+  # reference/abbreviations.md: reference/tooltips.md
+  # reference/meta-tags.md: reference/index.md
+  # reference/variables.md: https://mkdocs-macros-plugin.readthedocs.io/
+  # sponsorship.md: insiders/index.md
+  # upgrading.md: upgrade.md
   - minify:
       minify_html: true
-# Customization
-# extra:
-#   analytics:
-#     provider: google
-#     property: !ENV GOOGLE_ANALYTICS_KEY
-#   social:
-  # # - icon: fontawesome/brands/github
-  #   link: https://github.com/planesailingio/pigeono.io
-  # - icon: fontawesome/brands/gitter
-  #   link: https://gitter.im/squidfunk/mkdocs-material
-  # - icon: fontawesome/brands/docker
-  #   link: https://hub.docker.com/r/squidfunk/mkdocs-material/
-  # - icon: fontawesome/brands/python
-  #   link: https://pypi.org/project/mkdocs-material/
-  # - icon: fontawesome/brands/twitter
-  #   link: https://twitter.com/squidfunk
+      # Customization
+      # extra:
+      #   analytics:
+      #     provider: google
+      #     property: !ENV GOOGLE_ANALYTICS_KEY
+      #   social:
+# # - icon: fontawesome/brands/github
+#   link: https://github.com/planesailingio/pigeono.io
+# - icon: fontawesome/brands/gitter
+#   link: https://gitter.im/squidfunk/mkdocs-material
+# - icon: fontawesome/brands/docker
+#   link: https://hub.docker.com/r/squidfunk/mkdocs-material/
+# - icon: fontawesome/brands/python
+#   link: https://pypi.org/project/mkdocs-material/
+# - icon: fontawesome/brands/twitter
+#   link: https://twitter.com/squidfunk
+
 # Extensions
 markdown_extensions:
   - abbr
@@ -169,8 +166,8 @@ markdown_extensions:
 nav:
   - Home: index.md
   # - About: 
-    # - Introduction: about/origins.md
-    # - Get Involved: about/getinvolved.md
+  # - Introduction: about/origins.md
+  # - Get Involved: about/getinvolved.md
   - Get Involved: about/getinvolved.md
   - Docs:
       - Quick Start Guide: quick-start.md
@@ -181,7 +178,6 @@ nav:
           - Architecture Deep Dive: architecture/deep-dive.md
           - Authentication: architecture/sso.md
           - Self-Hosted Install: architecture/self-hosted.md
-          # - FAQ: faq.md
-
+            # - FAQ: faq.md
 # .
 # 🔍 Security Architecture Deep Dive

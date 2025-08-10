@@ -1,4 +1,4 @@
-FROM squidfunk/mkdocs-material:9.5.47
+FROM squidfunk/mkdocs-material:9.6
 # ENTRYPOINT ["mkdocs"]
 # CMD ["serve", "--dev-addr=0.0.0.0:8000"]
 

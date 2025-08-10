@@ -14,12 +14,16 @@ dev: compile
 
 publish-live:
   # mkdir -p
+	
 	yq eval -i '.site_url="https://pigeono.io"' ./src/mkdocs.yml
+	echo "Building the site.."
 	docker run -it --rm -v ${PWD}/src:/docs -v "$$(realpath ./docs)":/out docker.io/squidfunk/mkdocs-material:latest build -d /out
+	echo "Committing the site to git..."
 	git add src/ docs/
 	git commit -am'Updated website'
+
+	echo "Pushing the site to Github..."
 	git push
+
+	echo "Published!! :beer:"
 	
-# 	echo "Pushing to git repo"
-# 	cd "$$(realpath ../../pigeono.io/docs)" && echo "pigeono.io" > CNAME  && git add . && git commit -m'make publish' && git push
-# 	echo "well done, rhys\!" | cowsay | lolcat

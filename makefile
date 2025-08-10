@@ -16,6 +16,9 @@ publish-live:
   # mkdir -p
 	yq eval -i '.site_url="https://pigeono.io"' ./src/mkdocs.yml
 	docker run -it --rm -v ${PWD}/src:/docs -v "$$(realpath ./docs)":/out docker.io/squidfunk/mkdocs-material:latest build -d /out
+	git add src/ docs/
+	git commit -am'Updated website'
+	git push
 	
 # 	echo "Pushing to git repo"
 # 	cd "$$(realpath ../../pigeono.io/docs)" && echo "pigeono.io" > CNAME  && git add . && git commit -m'make publish' && git push

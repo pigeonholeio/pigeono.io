@@ -22,7 +22,7 @@
 site_name: PigeonHole
 site_url: https://pigeono.io
 site_author: PlaneSailing.io
-site_description: "Tired of clunky apps for sharing sensitive files or secrets? Meet PigeonHole, the sleek, secure, and super-smart CLI tool designed to make sharing secrets seamless with zero compromise on security \U0001F510✨"
+site_description: "Tired of clunky apps for sharing sensitive files or secrets? Meet PigeonHole — a sleek, secure CLI tool that makes sharing secrets seamless, without compromising security ✨"
 dev_addr: 0.0.0.0:8000
 # Repository
 repo_name: pigeonholeio/pigeonhole-cli

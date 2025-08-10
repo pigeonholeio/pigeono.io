@@ -25,8 +25,8 @@ jobs:
           restore-keys: |
             mkdocs-material-
       - name: Install dependencies
-        working-directory: ./docs
+        working-directory: ./src
         run: pip install mkdocs-material 
       - name: Deploy site
-        working-directory: ./docs
+        working-directory: ./src
         run: mkdocs gh-deploy --force

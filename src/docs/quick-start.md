@@ -101,7 +101,7 @@ source ~/.zshrd
 
 ## Sign In
 
-Signing into the cli tool is super easy.
+Signing into the cli tool is straight forward using your Identity Provider.
 ??? tip "Tip - Request a new Identity Provider Support"
     Only Microsoft Azure is currently supported. Raise a [[FEATURE REQUEST] Identity Provider](https://github.com/planesailingio/pigeono.io/issues/3){:target="_blank"} GitHub issue to add support for your Identity Provider.    
 
@@ -109,7 +109,7 @@ Simply run;
 ``` bash
 pigeonhole login
 ```
-The tool will also auto generate GPG keys for you if you haven't got one already created.
+The tool will prompt to you, follow the instructions then it will generate GPG keys for you if you haven't got them created.
 
 
 ## Send your first secret
@@ -127,7 +127,7 @@ Follow the [Managing Secrets](/secrets/manage) section to find out more about ma
 
   [Roadmap]: /roadmap/v1
   [Tor]: https://www.torproject.org
-  [Releases]: https://releases.pigeono.io 
+  [Releases]: https://github.com/pigeonholeio/pigeonhole-cli/releases
   [Brew Install]: https://brew.sh
   [Brew]: https://brew.sh
   [Journey]: /journey

@@ -1,5 +1,5 @@
 PWD := $$(pwd)
-.SILENT: build compile publish-test
+.SILENT: build compile publish-live
 
 compile:
 	sass src/assets/stylesheets/roadmap.scss material/assets/stylesheets/roadmap.css

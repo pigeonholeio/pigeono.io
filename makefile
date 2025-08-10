@@ -19,6 +19,7 @@ publish-live:
 	echo "❗ Building the site.."
 	docker run -it --rm -v ${PWD}/src:/docs -v "$$(realpath ./docs)":/out docker.io/squidfunk/mkdocs-material:latest build -d /out
 	echo "❗ Committing the site to git..."
+	echo "pigeono.io" > ./docs/CNAME
 	git add src/ docs/
 	git commit -am'Updated website'
 

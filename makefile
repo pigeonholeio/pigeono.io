@@ -16,14 +16,14 @@ publish-live:
   # mkdir -p
 	
 	yq eval -i '.site_url="https://pigeono.io"' ./src/mkdocs.yml
-	echo "Building the site.."
+	echo "❗ Building the site.."
 	docker run -it --rm -v ${PWD}/src:/docs -v "$$(realpath ./docs)":/out docker.io/squidfunk/mkdocs-material:latest build -d /out
-	echo "Committing the site to git..."
+	echo "❗ Committing the site to git..."
 	git add src/ docs/
 	git commit -am'Updated website'
 
-	echo "Pushing the site to Github..."
+	echo "❗ Pushing the site to Github..."
 	git push
 
-	echo "Published!! :beer:"
+	echo "✅ Published!! 🍺🍺🍺"
 	

@@ -3,9 +3,11 @@ title: Self-Hosted Installation
 ---
 
 # Self-Hosted Install
-This is something that has been thought about and has been baked into the app to make sure it could happen.    
-The tool and API has been built with this aspiration in mind. Most things are configurable and libraries and technologies were picked due to their interropability.    
 
-However, at present, I cannot support the tool, the online service and the extra demand a Self-Hosted version support would demand.    
+Self-hosting PigeonHole has been a core design goal from day one. Every line of code, every technology choice, and every configurable option was carefully selected to make running your own instance not just possible — but smooth and flexible.
 
-That said, ping me and let me know you're interested. On a case-by-case basis and the demand has been validated I could make something work.
+The tool and API are built to integrate seamlessly with your existing infrastructure, leveraging interoperable services and standards to ensure maximum adaptability.
+
+That said, supporting a self-hosted version alongside the online service is a significant commitment. At this time, I'm unable to provide official support or SLA guarantees for self-hosted deployments.
+
+However, if you're interested, please reach out. Depending on demand and use case, I'm open to exploring tailored options on a case-by-case basis. Your feedback could be the catalyst to making self-hosted PigeonHole a fully supported reality.

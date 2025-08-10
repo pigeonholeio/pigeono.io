@@ -10,7 +10,7 @@ The architecture is designed with Zero Trust at the forefront with its End-to-En
 The Key Management Service (KMS) service is provided by AWS leveraging Customer Managed Keys to generate data cipher keys.
 
 ## Always Client-Side Data Encryption
-Encryption and decryption always happens
+By default, encryption and decryption of data always happens
 
  
 

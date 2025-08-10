@@ -22,10 +22,11 @@ pigeonhole secrets send --recipient recipient@domain.com --filepath ./myfile
 echo "Some helpful output" | pigeonhole secrets send --recipient recipient@domain.com
 ```
 
+
 !!! tip "Secret Send Alias"
     Sending secrets can be shortened using `pigeonhole s s` e.g.
     ```
-pigeonhole s s -r recipient@domain.com -f ./myfile
+    pigeonhole s s -r recipient@domain.com -f ./myfile
     ```
 ## List Secrets
 ``` bash

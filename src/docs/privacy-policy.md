@@ -1,4 +1,5 @@
 # Privacy Policy
+
 ## Introduction
 
 PigeonHole ("we", "our", or "the Service") respects your privacy. This policy explains how we collect, use, and protect your information when you use our CLI tool and the pigeono.io website.
@@ -25,7 +26,7 @@ To respond to support requests.
 
 The website may use cookies for functionality and analytics. CLI usage is not tracked with cookies.
 
-##  Data Storage & Security
+## Data Storage & Security
 
 Encryption is end-to-end using open-source libraries.
 
@@ -33,7 +34,7 @@ Encrypted data is stored on S3-compatible backends.
 
 Only the recipients private keys can decrypt your secret.
 
-##  Third-Party Services
+## Third-Party Services
 
 Identity providers (e.g., GitHub) for authentication.
 
@@ -41,7 +42,7 @@ Storage providers for encrypted data.
 
 Open-source cryptography libraries.
 
-##  Your Rights (GDPR & Similar Laws)
+## Your Rights (GDPR & Similar Laws)
 
 If you are in the EEA, UK, or a region with similar protections, you have the right to:
 
@@ -53,19 +54,19 @@ If you are in the EEA, UK, or a region with similar protections, you have the ri
 
 - Withdraw consent where applicable.
 
-Contact us at privacy@pigeono.io
+Contact us at [privacy@pigeono.io](mailto:privacy@pigeono.io)
  to exercise these rights.
 
-##  International Transfers
+## International Transfers
 
 If your data is transferred outside your region, we use safeguards (such as Standard Contractual Clauses) to protect it.
 
-##  Updates
+## Updates
 
-We may update this Privacy Policy. The “last updated” date will always show the latest version.
+We may update this Privacy Policy. The "last updated" date will always show the latest version.
 
-##  Contact
+## Contact
 
-Email: privacy@pigeono.io
+Email: [privacy@pigeono.io](mailto:privacy@pigeono.io)
 
 Effective Date: August 30, 2025

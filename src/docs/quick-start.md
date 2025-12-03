@@ -2,132 +2,139 @@
 template: main.html
 title: Quick Start & Install
 ---
+
 # Getting started
-<!-- !!! note "Thank you for checking out PigeonHole!"
-    Firstly, thank you for your support and simply using the tool! It's this activity that will keep PigeonHole going.   
-    Secondly, PigeonHole is still under active development. Go take a look at the [Roadmap] to see the ideas and features that are being considered - go vote and have your input! -->
 
-
-Pigeonhole is a simple yet super-secure cli tool to
-transfer secrets and is entirely built for those
-who live and are familiar with the command-line.
+PigeonHole is a simple command-line tool that posts secrets securely. While I was formualting the [idea](./about/the-dea.md), I knew I wanted to build it from the grownd up to be intuitive and familiar to those who use modern command-line tooling and super easy to use.
 
 ## Installation
 
-Binaries are distributed directly and via several package managers.
+### Package Managers
 
-| Operating System      | Description                          |
-| ----------- | ------------------------------------ |
-| :material-apple: MacOS       |  [Brew](#macos), [Shell](#__tabbed_1_2)  |
-| :material-linux: Linux       |  [Brew](#linux), [Shell](#__tabbed_2_2) |
-| :material-microsoft: Windows    |  [WinGet](#windows), [WinGet](#__tabbed_3_1), [Shell](#__tabbed_3_2) |
-| :material-bash: General    |  [Raw Binaries](#manual-download) |
+=== "MacOS"
+    === ":simple-homebrew: Brew"
 
-!!! tip "Request a new Package Manager"
-    Raise a [[FEATURE REQUEST]](https://github.com/pigeonholeio/pigeonhole-cli/issues/new){:target="_blank"} to add support for another package manager - which package manager do you use?
+        ```
+        brew tap pigeonholeio/pigeonhole
+        brew install pigeonholeio/pigeonhole/pigeonhole-cli
+        ```
 
-### MacOS
+=== ":simple-linux: Linux"
+    === ":simple-homebrew: Brew"
 
-Install [Brew]{:target="_blank"} if you haven't already.
+        ```
+        brew tap pigeonholeio/pigeonhole
+        brew install pigeonholeio/pigeonhole/pigeonhole-cli
+        ```
+    === ":simple-ubuntu: Apt"
 
-=== ":material-apple: Brew"
 
+    === ":simple-rockylinux: Yum"
+
+
+
+    ## CLI Auto-Completion Script
+    It's handy to have the shell auto-completion installed for your shell to make using cli tools easier.   
+    To find out what shells are supported, run the following in your terminal.
     ``` bash
-    brew install pigeonholeio/pigeonhole/pigeonhole-cli
+    pigeonhole completion
     ```
-=== ":material-bash: Shell (Bash)"
-    The below script will work out which architecture your machine runs on and will download the relevant binary and will attempt to install it to `/usr/local/bin` with sudo.
-    ```
-    /bin/bash -c "$(curl -fsSL https://pigeono.io/assets/install.sh)"
-    ```
-
-    Find a full list of releases below in the [Manual Download](#manual-download) section.
-
-### Linux
-
-
-=== ":material-bash: Brew"
-    !!! success "Install Brew on Linux?"
-        Yes you can! Go ahead and give [Brew]{:target="_blank"} a try on Linux - it just doesn't support casks.    
-
+    Then run the command relevant for your shell e.g. Take ZSH as an example. Add the completion script output to your ZSH Profile:
     ``` bash
-    brew install pigeonholeio/pigeonhole/pigeonhole-cli
+    pigeonhole completion zsh >> ~/.zshrc
+    source ~/.zshrd
     ```
 
-=== ":material-bash: Shell (Bash)"
-    The below script will work out which architecture your machine runs on and will download the relevant binary and will attempt to install it to `/usr/local/bin` with sudo.
+=== ":material-microsoft: Windows"
+    === "Chocolatey"
+    Chocolatey has a mature eco-system of packages
     ```
-    /bin/bash -c "$(curl -fsSL https://pigeono.io/assets/install.sh)"
+choco install pigeonhole-cli
     ```
+    === ":simple-winget: WinGet"
 
-    Find a full list of releases below in the [Manual Download](#manual-download) section.
+### Release Binaries
 
-  
-### Windows
-=== ":fontawesome-brands-windows: WinGet"
-    !!! tip "Work in Progress"
-        I'm currently working on a Winget and PowerShell installer. They should be here soon!
-      
+### Manual Install & Release Binaries
 
-=== ":fontawesome-solid-terminal: Terminal (PowerShell)"
-    !!! tip "Coming soon"
-        I'm currently working on the Windows installers. They should be here soon!
-      
-=== ":fontawesome-brands-windows: Manual Install"
-    Find the Windows binaries are hosted and accessbile directly on the [Releases] page.
-    
-    !!! tip "Work in Progress"
-        I'm currently working on a Winget and PowerShell installer. They should be here soon!
-    
-
-### Manual / Download
-You can obtain the binaries for your platform and architecture by visiting [Releases].    
+You can obtain the binaries for your platform and architecture by visiting [Releases]{:target="_blank"}.
 
 1. Visit the [Releases]{:target="_blank"} page, find the latest release and download the binary for your architecture
 2. Place the binary in a location that is in your `$PATH` environment variable
 3. You should now be able to run `pigeonhole login` from the command-line
 
-## CLI Auto-Completion Script
-It's handy to have the shell auto-completion installed for your shell to make using cli tools easier.   
-To find out what shells are supported, run the following in your terminal.
-``` bash
-pigeonhole completion
-```
-Then run the command relevant for your shell e.g. Take ZSH as an example. Add the completion script output to your ZSH Profile:
-``` bash
-pigeonhole completion zsh >> ~/.zshrc
-source ~/.zshrd
-```
+## PigeonHole Authentication
 
-## Sign In
+Authenticication is handled completely by OpenID Connect and your Identity Provider.
+You must have a validated email address associated with your IdP or third party service.
 
-Signing into the cli tool is straight forward using your Identity Provider.
 ??? tip "Tip - Request a new Identity Provider Support"
-    Only Microsoft Azure is currently supported. Raise a [[FEATURE REQUEST] Identity Provider](https://github.com/planesailingio/pigeono.io/issues/3){:target="_blank"} GitHub issue to add support for your Identity Provider.    
+    Only Microsoft Azure is currently supported. Raise a [[FEATURE REQUEST] Identity Provider](https://github.com/planesailingio/pigeono.io/issues/3){:target="_blank"} GitHub issue to add support for your Identity Provider.
 
-Simply run;
-``` bash
-pigeonhole login
+### List Supported Identity Providers
+
+To find the list supported Identity Providers
+
+### Signing in
+
+To initiate the authentication flow, run;
+
+=== "Default IdP"
+    The default IdP will be shown with a green tick when running `auth list-providers` command
+
+    ```
+    pigeonhole login
+    ```
+=== "Specific IdP"
+
+    The following command will list the supported list of Identity Providers;
+
+    ``` bash
+    pigeonhole auth list-providers
+    ```
+    Now you can use pass your preferred IdP into the `login` command as follows;
+
+    ```
+    pigeonhole login --provider github
+    ```
+
+Follow the prompts to sign in and PigeonHole will generate keys to get you ready to send your first secret!
+
+## Send your first Secret
+
+Simply, specify the `recipient` and `filepath` and that's it! No complicated `gpg` commands to encrypt or decrypt, all that is handled for you.
+
+```bash
+    pigeonhole secret send --recipient user@domain.com --filepath ./myfile
 ```
-The tool will prompt to you, follow the instructions then it will generate GPG keys for you if you haven't got them created.
 
+That's it!
 
-## Send your first secret
-Simply, specify the `recipient` and `filepath` and that's it!
-``` bash
-pigeonhole secrets send --recipient user@domain.com --filepath ./somefile
+## Retrieving a Secret
+
+??? note "List Received Secrtes"
+    To find a list of secrets you've been sent use the `secret list` command;
+
+    ```
+    pigeonhole secret list
+    ```
+
+Once you know the secret reference of the secret you want to retrieve;
+
+```bash
+    pigeonhole secret collect --reference <reference>
 ```
+
+You can also use the `--filepath` to override the path used to decrypt and extract your secret
 
 ## Next Steps
-Follow the [Managing Secrets](/secrets/manage) section to find out more about managing secretes like;    
-- Listing    
-- Downloading    
-- Deleting    
+
+Take a look at [Managing Secrets](/secrets/manage) to find out more about managing secretes like;
+
+- Sending One Time Secrets
+- Secure file shredding
+- Sending Secrets with a custom expiry
+- Deleting Secrets
 - Send and pipe from stdin
 
-  [Roadmap]: /roadmap/v1
-  [Tor]: https://www.torproject.org
   [Releases]: https://github.com/pigeonholeio/pigeonhole-cli/releases
-  [Brew Install]: https://brew.sh
-  [Brew]: https://brew.sh
-  [Journey]: /journey

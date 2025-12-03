@@ -1,73 +1,64 @@
 ---
 title: Ephemeral & Transient Keys
 ---
+# Transient Keys Deeper Dive
+ Transient Keys are a feature in PigeonHole to provide a user friendly, temporary but secure encryption mechanism for sending secrets to recipients who have not yet signed in - bridging the gap between usability and zero-trust security.   
 
-The Transient Key feature in PigeonHole provides a secure, temporary encryption mechanism for sending secrets to recipients who have not yet registered their permanent public key bridging the gap between usability and zero-trust security.   
+ PigeonHole takes data security seriously and therefore the use of Transient Keys are only used in [Confidential Computing](#secure-enclaves) secure enclave.
+
 
 !!! tip  
-    For the best experience (and to minimise use of ephemeral keys), recipients should sign in to PigeonHole **before** you send them a secret.
+    For the the ultimate security posture, recipients should sign in to PigeonHole **before** you send them a secret to ensure a fully trusted key exchange can take place.
 
-# Overview
+
+- [Transient Keys Deeper Dive](#transient-keys-deeper-dive)
+  - [Transient Key Generation \& Storage](#transient-key-generation--storage)
+  - [Recipient Key Exchange](#recipient-key-exchange)
+  - [Secret Re-Encryption Process](#secret-re-encryption-process)
+  - [Separation of Concerns](#separation-of-concerns)
+  - [Secure Enclaves](#secure-enclaves)
+
+
+
+
 By default, when a user's public key is known to **PigeonHole**, it is used for encryption.
 
-When sending a secret to a recipient **not yet known** to PigeonHole, an **ephemeral (transient) key** is used instead.  
-These keys are dynamically generated and replaced with the recipient's permanent public key once they sign in for the first time. At that point, PigeonHole securely re-encrypts the data with the new key.
+When sending a secret to a recipient **not yet known** to PigeonHole, an **ephemeral (transient) key** is securely generated and issued on behalf of that user.
 
+## Transient Key Generation & Storage
+
+
+`Transient key` content is split and securely stored using industry standard best practice envelope encryption.
+
+`Transient keys` are generated using the OpenPGP libraries maintained by ProtonMail and stored separately to the secret and file cipher data.
+
+## Recipient Key Exchange
+
+Upon a user signing into PigeonHole, the users' client-side generated keys validated and uploaded. On uploading of these keys where `transient keys` are found, these are rotated and secrets re-encrypted with the users' new keys.
 
 Multiple safeguards are in-place ensuring the security of the **Transient Key** feature — even from PigeonHole itself.
 
-The transient key process is seamless and secure:
 
-1. Keys are securely generated and anonymised.
-2. Data is encrypted **client-side** with an ephemeral public key.
-3. The recipient signs in and uploads their permanent public key.
-4. PigeonHole re-encrypts the data with the new key.
-5. The recipient is notified that their secret is ready to download.
+## Secret Re-Encryption Process
 
-If you know a more secure approach, we’d love to hear from you.
+The transient key rotation is seamless and secure.
 
----
+1. The recipient has been sent a notification
+2. Recipeint signs into PigeonHole and new keys are uploaded
+3. PigeonHole triggers re-encrypion of the secrets encrypted by the `transient key`
 
-# Deep Dive
+!!! note
 
-## Secure Key Generation
+    Data is re-encrypted through the use of Golang streams between functions and therefore means no unencrypted data reaches the disks the service runs on.
 
-- Keys are generated **in-memory** on dedicated, isolated hosts.  
-- An ephemeral key is created using the **GnuPG** library.  
-- The key is encrypted using a **KMS** service, anonymised, and stored without any reference to the user or secret.  
-- This key is retained until the recipient signs in.  
-- Generation typically takes a few seconds.
+    Coupled with [Confidential Computing](#secure-enclaves)
 
-!!! note  
-    Transient keys are stored using a randomly generated GUID as the filename, ensuring no user or secret metadata is exposed.
-
----
-
-## Client-Side Data Encryption
-
-- The ephemeral public key is transmitted back to the sender’s client.  
-- The sender’s client encrypts the data locally, on behalf of the intended recipient.  
-- The encrypted data is then pushed to PigeonHole’s secure storage.  
-
-!!! info  
-    Recipients receive an **email notification** with instructions on signing in to retrieve the secret.
-
----
-
-## Key Rotation Process
-
-Once the recipient signs in and uploads their permanent public key, the system:
-
-1. Downloads the encrypted data into a secure environment.  
-2. Decrypts it in-memory, then re-encrypts it with the new key.  
-3. Stores the newly encrypted data back in secure storage.  
-4. Notifies the recipient that their secret is ready.
-
----
 ## Separation of Concerns
 
-In addition to the safeguards provided by PigeonHole's **distributed architecture**, transient keys are further protected by using randomly generated GUIDs.  
-These identifiers are virtually impossible to link back to the encrypted senders, recipients nor secrets they protect.
+In addition to the safeguards provided by PigeonHole's **distributed architecture**, transient keys are further protected by obsfacating and anonymising techniques with UUID's.
 
-### Strict Storage Policies
-Access to storage is tightly controlled. Only services that explicitly require it are granted permissions, with read/write rights restricted to specific storage paths at a granular level.
+These identifiers are virtually impossible to brute-force and trace back to the encrypted senders, recipients or secrets they protect.
+
+## Secure Enclaves
+
+PigeonHole secure enclaves comes in the form of Confidential Computing, providing all memory and disk usage with secure AES256 encryption.

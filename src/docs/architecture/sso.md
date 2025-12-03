@@ -1,16 +1,17 @@
 # Enterprise Authentication out of the box
-PigeonHole, like any other Enterprise app, is designed to use an Identity Provider.    
+PigeonHole is built on top of OpenID Connect, (OAuth, to externalise the authentication and credential handling. In turn provides a cryptographic chain of trust where PigeonHole ties an email address to their cryptographic identity (a public key).    
 
-PigeonHole leverages OpenID Connect to externalise the authentication and credential handling. This provides a cryptographic chain of trust where PigeonHole ties a users email address (their identity) to a cryptographic public key.    
-Following this model ensures if you send a secret to a particular email address, only that **person** can decrypt it. With only GPG, you can't infer this trust.
+This model ensures when you send a secret to a recipient, only that **person** can decrypt it. You can't infer this trust with only OpenPGP alone - PigeonHole takes GPG a step further!
 
 ## Supported Identity Providers
-Currently only Microsoft Azure is supported.    
+While PigeonHole is built from the ground up to be engineer focused and trust OpenID Connect Identity Providers, additional social connectors are also supported;
 
-However, any compliant OpenID Connect (OIDC) Identity Provider is supportable.    
-Raise a [[FEATURE REQUEST] Identity Provider](https://github.com/pigeonholeio/pigeonhole-cli/issues/new){:target="_blank"} to enable it.
+PigeonHole currently supports;
+- Microsoft Identities
+  - Organisation (Entra ID, Work and School) and Personal accounts
+- GitHub
+- Gitlab
 
-There is a plan to support the following however it is based on demand;    
-- Okta    
-- Google    
-- Keycloak    
+
+!!! note
+    You can find out how to install and sign in to PigeonHole in the [Quick Start](../quick-start.md) guide

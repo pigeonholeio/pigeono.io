@@ -2,32 +2,50 @@
 title: About PigeonHole
 ---
 
-# How you can help
 
 🚀🫶 Thanks for your interest in supporting the project! 🫶 🚀
 
-The project is in its infancy so any help is greatly appreciated. Your involvement keeps the gears turning and gives me the motivation to maintain the service. Here's how you can make an impact:
-## Easy Wins 🎉
-Sometimes, the smallest actions make the biggest difference!
+The project is in its infancy so any help is greatly appreciated. Your involvement keeps the gears turning and fosters the motivation to maintain the service. Here's are some simple ways you can have an impact:
 
-### ⭐ Star the project on GitHub
+- [📨 Send a Secret](#-send-a-secret)
+- [Community Following](#community-following)
+  - [⭐ GitHub Star](#-github-star)
+  - [X Follow](#x-follow)
+- [☕ Buy Me a Coffee](#-buy-me-a-coffee)
+- [Found a Bug? Let's Squash It! 🐛](#found-a-bug-lets-squash-it-)
+- [Got Feedback?](#got-feedback)
+- [Contribute to the Code 💻](#contribute-to-the-code-)
+- [Feature Requests 🛠️](#feature-requests-️)
+- [Review PigeonHole 📝](#review-pigeonhole-)
+
+
+!!! note    
+    
+    A bigger following helps spread the word and keeps the service free, 30 seconds of your time for a follow or a star makes such a difference!
+
+# 📨 Send a Secret
+Sending a secret is as simple as it gets. Simply using the tool validates the need for a service like this and fuels my motivation to keep it going.
+
+# Community Following
+
+## ⭐ GitHub Star
 A simple star shows your love for the project and boosts visibility. It’s like giving us a virtual high-five!
 
 All you have to do is head over to [github.com/pigeonholeio/pigeonhole-cli](https://github.com/pigeonholeio/pigeonhole-cli){:target="_blank"}, make sure you're logged in and star it in the top right-hand corner 👍
 
-### Follow on X (Twitter)
-Head over to [x.com/pigeonholeio](https://x.com/pigeonholeio){:target="_blank"} and click follow.
+## X Follow
+Follow me on [x.com/pigeonholeio](https://x.com/pigeonholeio){:target="_blank"}
 
-### 🍺 Buy Me a Beer
-I like beer and it is a Welshman's currency - developing, maintain and paying the AWS costs takes time, energy and money. You can fuel my coding sessions by buying me a beer.
+# ☕ Buy Me a Coffee
+Developing, maintaining and paying the infrastructure costs takes time, effort and money.
+
+If you've sent one or a hundred secrets, why not show your appreciation. You can fuel my coding sessions through buying me a coffee.
 <script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="pigeonholeio" data-color="#FFDD00" data-emoji="🍺"  data-font="Poppins" data-text="Buy me a Beer!" data-outline-color="#000000" data-font-color="#000000" data-coffee-color="#ffffff" ></script>
 
 
-### 📨 Send a Secret
-Sending a secret using the tool is as simple as it gets. Simply using the tool increases my motivation and validates the service to keep it going
 
 ---
-## Found a Bug? Let's Squash It! 🐛
+# Found a Bug? Let's Squash It! 🐛
 Think you've spotted a glitch? Found something that doesn't quite work right? Let’s fix it together!
 
 How to Report:    
@@ -41,7 +59,7 @@ Every bug report helps make PigeonHole better, and you get eternal gratitude in 
 
 ---
 
-## Got Feedback? 
+# Got Feedback? 
 
 I'm all ears!  
 
@@ -60,7 +78,7 @@ Email me at **feedback@pigeono.io**. I read every message - I value your feedbac
 
 ---
 
-## Contribute to the Code 💻  
+# Contribute to the Code 💻  
 
 Are you a coder looking to make an impact? I welcome pull requests with open arms!  
 
@@ -72,7 +90,7 @@ I'll help you get your work merged and celebrated!
 
 ---
 
-## Feature Requests 🛠️  
+# Feature Requests 🛠️  
 
 Do you dream of a feature that would make PigeonHole even better?  
 
@@ -84,7 +102,7 @@ Do you dream of a feature that would make PigeonHole even better?
 
 ---
 
-## Review PigeonHole 📝  
+# Review PigeonHole 📝  
 
 Find using PigeonHole easy and straight forward? Share your experience!  
 

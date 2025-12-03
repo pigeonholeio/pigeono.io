@@ -21,7 +21,7 @@
 </span><span id=__span-2-2><a id=__codelineno-2-2 name=__codelineno-2-2 href=#__codelineno-2-2></a>curl -fsSL https://packages.pigeono.io/gpg.pub | sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/pigeonhole.gpg
 </span><span id=__span-2-3><a id=__codelineno-2-3 name=__codelineno-2-3 href=#__codelineno-2-3></a>echo &quot;deb [arch=amd64] https://packages.pigeono.io/apt noble main&quot; | sudo tee /etc/apt/sources.list.d/pigeonhole.list
 </span><span id=__span-2-4><a id=__codelineno-2-4 name=__codelineno-2-4 href=#__codelineno-2-4></a>sudo apt update &amp;&amp; sudo apt install pigeonhole-cli
-</span></code></pre></div> </div> <div class=tabbed-block> <p>Configure the Yum repo by; <div class="language-text highlight"><pre><span></span><code><span id=__span-3-1><a id=__codelineno-3-1 name=__codelineno-3-1 href=#__codelineno-3-1></a>sudo rpm --import https://packages.pigeono.io/gpg.asc
+</span></code></pre></div> </div> <div class=tabbed-block> <p>Yum packages are distributed via our package mirror <a href=https://packages.pigeono.io>https://packages.pigeono.io</a>.</p> <p>Configure the Yum repo by; <div class="language-text highlight"><pre><span></span><code><span id=__span-3-1><a id=__codelineno-3-1 name=__codelineno-3-1 href=#__codelineno-3-1></a>sudo rpm --import https://packages.pigeono.io/gpg.asc
 </span><span id=__span-3-2><a id=__codelineno-3-2 name=__codelineno-3-2 href=#__codelineno-3-2></a>sudo tee /etc/yum.repos.d/pigeonhole.repo &lt;&lt;EOF
 </span><span id=__span-3-3><a id=__codelineno-3-3 name=__codelineno-3-3 href=#__codelineno-3-3></a>[pigeonhole]
 </span><span id=__span-3-4><a id=__codelineno-3-4 name=__codelineno-3-4 href=#__codelineno-3-4></a>name=PigeonHole Repository
